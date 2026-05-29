@@ -5,63 +5,75 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  font-family: "Gowun Dodum", sans-serif; /* 웹폰트 적용 */
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: "Gowun Dodum", sans-serif;
 }
+
+/* ========================================
+   메인 레이아웃
+   ======================================== */
+
+.layout {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   프로필 카드
+   ======================================== */
 
 .profile-card {
   background-color: white;
   width: 350px;
+  flex-shrink: 0;
   padding: 40px 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  text-align: center; /* 카드 안의 모든 요소를 가운데 정렬 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* 프로필 이미지 동그랗게 만들기 */
 .profile-img {
   width: 120px;
   height: 120px;
-  border-radius: 50%; /* 50%를 주면 완벽한 원이 됩니다 */
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 3px solid #10b981; /* 테두리 색상 */
+  border: 3px solid #10b981;
 }
 
 /* ========================================
-           [실습 포인트] 여기서부터 직접 스타일을 꾸며보세요!
-           ======================================== */
+   [실습 포인트] 여기서부터 직접 스타일을 꾸며보세요!
+   ======================================== */
 
-/* 이름 스타일링 */
 .name {
-  /* 글자 색상, 크기, 굵기를 변경해보세요 */
   color: #1f2937;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* 직업/타이틀 스타일링 */
 .job-title {
-  /* 글자 색상을 회색 톤으로 바꾸고 살짝 띄워보세요 */
-  color: #10b981; /* 메인 테마색인 초록색 사용 */
+  color: #10b981;
   font-size: 14px;
-  letter-spacing: 2px; /* 자간(글자 사이 간격) 넓히기 */
+  letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
-/* 자기소개 본문 스타일링 */
 .about-me {
   color: #4b5563;
   font-size: 15px;
-  line-height: 1.6; /* 줄 간격 넓혀서 가독성 높이기 */
+  line-height: 1.6;
   margin-bottom: 30px;
-  text-align: left; /* 본문만 왼쪽 정렬로 변경 */
-  word-break: keep-all; /* 단어 단위로 줄바꿈 (한글 가독성에 좋음) */
+  text-align: left;
+  word-break: keep-all;
 }
 
-/* 연락처(해시태그) 스타일링 */
 .contact-info {
   display: inline-block;
   background-color: #f3f4f6;
@@ -70,11 +82,190 @@ body {
   border-radius: 20px;
   font-size: 13px;
   margin: 5px;
-  text-decoration: none; /* 링크 밑줄 제거 */
+  text-decoration: none;
 }
 
-/* 연락처에 마우스 올렸을 때 효과 */
 .contact-info:hover {
   background-color: #10b981;
   color: white;
+}
+
+/* ========================================
+   프로젝트 그리드 (3×2)
+   ======================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 185px);
+  grid-template-rows: repeat(2, auto);
+  gap: 16px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(16, 185, 129, 0.7);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.2);
+}
+
+.proj-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.proj-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-name {
+  padding: 10px 10px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.4;
+}
+
+/* 각 카드 썸네일 플레이스홀더 색상 */
+.project-card:nth-child(1) .proj-thumb { background: linear-gradient(135deg, #1a1a4e, #3a3080); }
+.project-card:nth-child(2) .proj-thumb { background: linear-gradient(135deg, #0f3460, #1a6090); }
+.project-card:nth-child(3) .proj-thumb { background: linear-gradient(135deg, #2d1b69, #6a3fa0); }
+.project-card:nth-child(4) .proj-thumb { background: linear-gradient(135deg, #0a3d2e, #0d8060); }
+.project-card:nth-child(5) .proj-thumb { background: linear-gradient(135deg, #4a1530, #a0204a); }
+.project-card:nth-child(6) .proj-thumb { background: linear-gradient(135deg, #102840, #1a5080); }
+
+/* ========================================
+   그로구 (Baby Yoda) SVG 애니메이션
+   ======================================== */
+
+.force-sparkles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.sp {
+  opacity: 0;
+  animation: spark-blink 3s ease-in-out infinite;
+}
+
+.sp-1  { animation-delay: 0s;    animation-duration: 3.2s; }
+.sp-2  { animation-delay: 0.5s;  animation-duration: 2.8s; }
+.sp-3  { animation-delay: 1.0s;  animation-duration: 4.1s; }
+.sp-4  { animation-delay: 1.5s;  animation-duration: 3.5s; }
+.sp-5  { animation-delay: 0.8s;  animation-duration: 2.6s; }
+.sp-6  { animation-delay: 2.0s;  animation-duration: 3.8s; }
+.sp-7  { animation-delay: 0.3s;  animation-duration: 4.5s; }
+.sp-8  { animation-delay: 1.8s;  animation-duration: 3.0s; }
+.sp-9  { animation-delay: 0.6s;  animation-duration: 3.7s; }
+.sp-10 { animation-delay: 2.5s;  animation-duration: 2.9s; }
+.sp-11 { animation-delay: 1.2s;  animation-duration: 4.2s; }
+.sp-12 { animation-delay: 0.9s;  animation-duration: 3.3s; }
+
+@keyframes spark-blink {
+  0%, 100% { opacity: 0;   transform: scale(0.4); }
+  45%, 55% { opacity: 0.9; transform: scale(1.4); }
+}
+
+.grogu-wrap {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.grogu-wrap svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter:
+    drop-shadow(0 10px 28px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 0 18px rgba(128, 182, 104, 0.35));
+}
+
+.grogu-1 {
+  width: 175px;
+  bottom: 3%;
+  left: 2%;
+  animation: grogu-a 4.2s ease-in-out infinite;
+}
+
+.grogu-2 {
+  width: 130px;
+  top: 4%;
+  right: 4%;
+  animation: grogu-b 5.8s ease-in-out infinite 1.3s;
+}
+
+.grogu-3 {
+  width: 95px;
+  top: 50%;
+  right: 2%;
+  opacity: 0.82;
+  animation: grogu-c 3.9s ease-in-out infinite 2.1s;
+}
+
+@keyframes grogu-a {
+  0%, 100% { transform: translateY(0)     rotate(-4deg); }
+  50%       { transform: translateY(-24px) rotate(-1deg); }
+}
+
+@keyframes grogu-b {
+  0%, 100% { transform: translateY(-6px)  rotate(4deg); }
+  50%       { transform: translateY(-28px) rotate(2deg); }
+}
+
+@keyframes grogu-c {
+  0%, 100% { transform: translateY(0)     rotate(3deg); }
+  35%       { transform: translateY(-20px) rotate(0deg); }
+  70%       { transform: translateY(-10px) rotate(4deg); }
+}
+
+/* ========================================
+   반응형
+   ======================================== */
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 320px;
+  }
+  .grogu-1 { width: 110px; bottom: 1%; left: 1%; }
+  .grogu-2 { width: 85px;  top: 2%;   right: 2%; }
+  .grogu-3 { display: none; }
 }
