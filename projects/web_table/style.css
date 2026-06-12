@@ -1,0 +1,154 @@
+/* ==========================================
+   1. 전체 페이지 공통 스타일 정의
+   ========================================== */
+
+/* 모든 요소(*), 요소의 앞(before), 뒤(after)에 상자 크기 계산 방식을 고정합니다.
+   패딩과 테두리를 채워도 상자 전체 너비가 늘어나지 않게 막아주는 초급 필수 속성입니다. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Malgun Gothic", sans-serif; /* 윈도우 기본 맑은고딕 글꼴 지정 */
+  background-color: #f4f6f9; /* 배경: 눈이 편안한 연한 회색 무채색조 */
+  margin: 0; /* 브라우저가 기본으로 가지는 외곽 여백 초기화 */
+  padding: 20px; /* 화면 전체 가장자리에 약간의 여백 생성 */
+}
+
+/* ==========================================
+   2. 게시판 큰 틀(컨테이너) 및 제목 스타일
+   ========================================== */
+
+.board-container {
+  max-width: 800px; /* 게시판이 너무 가로로 퍼지지 않게 최대 너비 제한 */
+  margin: 0 auto; /* 좌우 마진을 자동으로 설정하여 화면 정중앙에 배치 */
+  background-color: #ffffff; /* 본문 상자 배경은 깔끔한 순백색 */
+  padding: 30px; /* 상자 내부 요소들과 테두리 사이의 여백 */
+  border-radius: 10px; /* 딱딱한 네모 모서리를 둥글게 깎음 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 은은하고 입체적인 그림자 효과 */
+}
+
+.board-title {
+  text-align: center; /* 제목 글자를 가운데로 정렬 */
+  color: #333333; /* 완전 검은색보다 고급스러운 짙은 회색 */
+  margin-top: 0; /* 위쪽 기본 마진 제거 */
+  margin-bottom: 25px; /* 아래쪽 입력 폼과의 간격 생성 */
+}
+
+/* ==========================================
+   3. 글쓰기 입력창(Form) 스타일
+   ========================================== */
+
+.form-section {
+  background-color: #f9f9f9; /* 입력 구역임을 인지하도록 한 단계 어두운 회색 적용 */
+  padding: 20px; /* 입력 폼 내부 상하좌우 여백 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  margin-bottom: 30px; /* 아래쪽 목록 테이블과의 간격 격리 */
+}
+
+/* 작성자, 제목 입력창 공통 스타일 */
+.input-field {
+  width: 100%; /* 부모 상자 너비에 100% 꽉 차게 가득 채움 */
+  padding: 10px; /* 텍스트가 테두리에 붙지 않게 안쪽 여백 설정 */
+  margin-bottom: 10px; /* 아래에 오는 다른 입력창과의 수직 간격 */
+  border: 1px solid #cccccc; /* 연한 회색 테두리 선 */
+  border-radius: 4px; /* 입력창 모서리 살짝 라운딩 */
+}
+
+/* 내용 입력창 전용 스타일 */
+.textarea-field {
+  width: 100%; /* 너비 가득 채움 */
+  height: 100px; /* 줄글을 쓰는 곳이므로 높이를 100px로 넉넉하게 설정 */
+  padding: 10px; /* 안쪽 여백 */
+  margin-bottom: 15px; /* 아래 등록 버튼과의 간격 */
+  border: 1px solid #cccccc; /* 테두리 */
+  border-radius: 4px; /* 모서리 라운딩 */
+  resize: none; /* 사용자가 마우스로 우측 하단을 끌어 크기를 바꾸는 것 방지 */
+}
+
+/* 등록 버튼 스타일 */
+.submit-btn {
+  width: 100%; /* 버튼을 가로로 길게 100% 채움 */
+  padding: 12px; /* 버튼을 도톰하고 누르기 좋게 패딩 부여 */
+  background-color: #007bff; /* 신뢰감과 포인트를 주는 파란색 */
+  color: #ffffff; /* 파란 배경 위에 선명하게 보이도록 글자색은 흰색 */
+  border: none; /* 브라우저가 기본으로 제공하는 투박한 버튼 테두리 제거 */
+  border-radius: 4px; /* 모서리 라운딩 */
+  font-size: 16px; /* 중요한 버튼이므로 글씨 크기 키움 */
+  font-weight: bold; /* 글씨 굵게 */
+  cursor: pointer; /* 마우스를 올리면 손가락 표식으로 변경 */
+}
+
+/* 등록 버튼 위에 마우스 커서를 올렸을 때(Hover 상태) 디자인 */
+.submit-btn:hover {
+  background-color: #0056b3; /* 색상을 조금 더 어둡게 바꾸어 피드백 제공 */
+}
+
+/* ==========================================
+   4. 게시글 목록 테이블(Table) 스타일
+   ========================================== */
+
+.post-table {
+  width: 100%; /* 테이블 전체 너비 100% */
+  border-collapse: collapse; /* 이중 테두리 선을 하나의 단일 선으로 결합 (필수) */
+}
+
+/* 테이블 제목(th)과 일반 셀(td) 공통 디자인 */
+.post-table th,
+.post-table td {
+  padding: 12px 10px; /* 셀 내부 위아래 12px, 좌우 10px 여백 */
+  text-align: left; /* 글자 정렬을 왼쪽 기준으로 통일 */
+  border-bottom: 1px solid #dddddd; /* 행과 행 사이를 구분하는 연한 가로줄 */
+}
+
+/* 테이블 첫 줄 제목 영역(th) 전용 스타일 */
+.post-table th {
+  background-color: #eeeeee; /* 열 제목 구역 전체 배경을 회색으로 칠함 */
+  color: #555555; /* 글자 색상 */
+  font-weight: bold; /* 글씨 두껍게 */
+}
+
+/* 각 열(Column)의 너비 비중 제어 */
+.col-author {
+  width: 15%;
+} /* 작성자 열 */
+.col-content {
+  width: 50%;
+} /* 제목 및 내용 열 */
+.col-date {
+  width: 20%;
+} /* 작성일 열 */
+.col-action {
+  width: 15%;
+} /* 삭제 버튼 열 */
+
+/* 테이블 내부 게시글 서식 세부 제어 */
+.post-title-text {
+  color: #222222; /* 제목은 선명하고 진한 색으로 부각 */
+  font-size: 15px;
+}
+
+.post-summary {
+  color: #777777; /* 부가 설명(내용)은 흐릿하고 작은 회색 글씨로 배치 */
+  font-size: 13px;
+  display: inline-block; /* 여백 통제를 위해 인라인 블록화 */
+  margin-top: 4px; /* 제목과의 약간의 수직 틈새 생성 */
+}
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+  background-color: #dc3545; /* 삭제/위험을 상징하는 빨간색 */
+  color: #ffffff; /* 글자색 흰색 */
+  border: none; /* 기본 버튼 테두리 선 제거 */
+  padding: 6px 12px; /* 아담한 크기의 내부 여백 */
+  border-radius: 4px; /* 모서리 라운딩 */
+  font-size: 13px; /* 일반 글씨보다 약간 작게 조절 */
+  cursor: pointer; /* 마우스 오버 시 손가락 표식 */
+}
+
+/* 삭제 버튼 위에 마우스 커서를 올렸을 때(Hover 상태) */
+.delete-btn:hover {
+  background-color: #bd2130; /* 조금 더 묵직한 다크 레드로 전환 */
+}

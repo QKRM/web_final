@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-shapes">
+    <span class="shape s1"></span>
+    <span class="shape s2"></span>
+    <span class="shape s3"></span>
+    <span class="shape s4"></span>
+    <span class="shape s5"></span>
+  </div>
+
+  <header class="hero">
+    <h1 class="hero-title">CSS Animation Playground</h1>
+    <p class="hero-sub">순수 CSS로 그려낸 움직이는 화면</p>
+    <div class="scroll-hint"><span></span></div>
+  </header>
+
+  <main>
+
+    <!-- 1. 로딩 스피너 -->
+    <section class="section">
+      <h2 class="section-title">Loaders</h2>
+      <div class="grid">
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="loader-ring"></div>
+            <p class="card-label">Ring</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="loader-ring"&gt;&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.loader-ring {
+  width: 54px;
+  height: 54px;
+  border: 6px solid #2a3346;
+  border-top-color: #38e8ff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="loader-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <p class="card-label">Dots</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="loader-dots"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.loader-dots { display: flex; gap: 10px; }
+.loader-dots span {
+  width: 14px; height: 14px;
+  background: #ff5ca0;
+  border-radius: 50%;
+  animation: bounce 1.2s ease-in-out infinite;
+}
+.loader-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+  background: #9b5cff;
+}
+.loader-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+  background: #38e8ff;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%      { transform: translateY(-18px); opacity: 1; }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="loader-bars">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="card-label">Bars</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="loader-bars"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.loader-bars {
+  display: flex; gap: 6px;
+  align-items: flex-end; height: 50px;
+}
+.loader-bars span {
+  width: 8px; height: 100%;
+  background: #3ddc97;
+  border-radius: 4px;
+  animation: stretch 1s ease-in-out infinite;
+}
+.loader-bars span:nth-child(2) { animation-delay: 0.1s; }
+.loader-bars span:nth-child(3) { animation-delay: 0.2s; }
+.loader-bars span:nth-child(4) { animation-delay: 0.3s; }
+.loader-bars span:nth-child(5) { animation-delay: 0.4s; }
+@keyframes stretch {
+  0%, 100% { transform: scaleY(0.3); }
+  50%      { transform: scaleY(1); }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="loader-cube">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <p class="card-label">Cube Flip</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="loader-cube"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.loader-cube {
+  width: 48px; height: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.loader-cube span {
+  background: #ffd166;
+  border-radius: 3px;
+  animation: cubeScale 1.4s ease-in-out infinite;
+}
+.loader-cube span:nth-child(2) { animation-delay: 0.2s; }
+.loader-cube span:nth-child(3) { animation-delay: 0.6s; }
+.loader-cube span:nth-child(4) { animation-delay: 0.4s; }
+@keyframes cubeScale {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(0.4); opacity: 0.4; }
+}</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. 호버 버튼 -->
+    <section class="section">
+      <h2 class="section-title">Hover Buttons</h2>
+      <div class="grid">
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <button class="btn btn-fill">Fill</button>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;button class="btn btn-fill"&gt;Fill&lt;/button&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.btn {
+  position: relative;
+  padding: 14px 28px;
+  font-size: 1rem; font-weight: 600;
+  color: #fff; border: none;
+  border-radius: 10px; cursor: pointer;
+  overflow: hidden; background: #2a3346;
+}
+.btn-fill { z-index: 0; }
+.btn-fill::before {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, #ff5ca0, #9b5cff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.btn-fill:hover::before { transform: scaleX(1); }</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <button class="btn btn-shine">Shine</button>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;button class="btn btn-shine"&gt;Shine&lt;/button&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.btn-shine {
+  background: linear-gradient(90deg, #38e8ff, #3ddc97);
+  color: #06222a;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -120%;
+  width: 60%; height: 100%;
+  background: linear-gradient(120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent);
+  transition: left 0.6s ease;
+}
+.btn-shine:hover::after { left: 130%; }</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <button class="btn btn-grow">Grow</button>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;button class="btn btn-grow"&gt;Grow&lt;/button&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.btn-grow {
+  background: #9b5cff;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.btn-grow:hover {
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(155,92,255,0.5);
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <button class="btn btn-border">Border Run</button>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;button class="btn btn-border"&gt;Border Run&lt;/button&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.btn-border {
+  background: transparent;
+  border: 2px solid transparent;
+}
+.btn-border::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: 10px; padding: 2px;
+  background: linear-gradient(90deg,
+    #ff5ca0, #38e8ff, #ffd166, #ff5ca0);
+  background-size: 300% 100%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: gradientMove 4s linear infinite;
+}
+@keyframes gradientMove {
+  to { background-position: 300% 0; }
+}</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. 변형 도형 -->
+    <section class="section">
+      <h2 class="section-title">Morphing Shapes</h2>
+      <div class="grid">
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="morph-blob"></div>
+            <p class="card-label">Blob</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="morph-blob"&gt;&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.morph-blob {
+  width: 70px; height: 70px;
+  background: linear-gradient(135deg, #ff5ca0, #9b5cff);
+  animation: morph 6s ease-in-out infinite;
+}
+@keyframes morph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: rotate(180deg);
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="rotate-3d"></div>
+            <p class="card-label">3D Cube</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="rotate-3d"&gt;&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.rotate-3d {
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, #38e8ff, #3ddc97);
+  box-shadow: 0 0 20px rgba(56,232,255,0.4);
+  animation: rotate3d 4s linear infinite;
+}
+@keyframes rotate3d {
+  0%   { transform: rotateX(0) rotateY(0); }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="pulse-heart"></div>
+            <p class="card-label">Heartbeat</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="pulse-heart"&gt;&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.pulse-heart {
+  width: 50px; height: 50px;
+  background: #ff5ca0;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: heartbeat 1.3s ease-in-out infinite;
+}
+.pulse-heart::before,
+.pulse-heart::after {
+  content: ""; position: absolute;
+  width: 50px; height: 50px;
+  background: #ff5ca0; border-radius: 50%;
+}
+.pulse-heart::before { top: -25px; left: 0; }
+.pulse-heart::after  { top: 0; left: 25px; }
+@keyframes heartbeat {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  25%      { transform: rotate(-45deg) scale(1.2); }
+  40%      { transform: rotate(-45deg) scale(1); }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview">
+            <div class="spin-square"></div>
+            <p class="card-label">Color Spin</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="spin-square"&gt;&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.spin-square {
+  width: 60px; height: 60px;
+  border-radius: 12px;
+  animation: spin 3s linear infinite,
+    colorShift 4s ease-in-out infinite;
+}
+@keyframes colorShift {
+  0%   { background: #ff5ca0; }
+  33%  { background: #38e8ff; }
+  66%  { background: #ffd166; }
+  100% { background: #ff5ca0; }
+}</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. 텍스트 애니메이션 -->
+    <section class="section">
+      <h2 class="section-title">Text Effects</h2>
+      <div class="grid">
+
+        <div class="demo-card">
+          <div class="demo-preview text-preview">
+            <p class="text-gradient">GRADIENT</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;p class="text-gradient"&gt;GRADIENT FLOW&lt;/p&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.text-gradient {
+  font-size: 2.5rem; font-weight: 800;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg,
+    #ff5ca0, #ffd166, #38e8ff,
+    #9b5cff, #ff5ca0);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientMove 5s linear infinite;
+}
+@keyframes gradientMove {
+  to { background-position: 300% 0; }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview text-preview">
+            <p class="text-wave">
+              <span>W</span><span>A</span><span>V</span><span>E</span>
+              <span>&nbsp;</span>
+              <span>T</span><span>E</span><span>X</span><span>T</span>
+            </p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;p class="text-wave"&gt;
+  &lt;span&gt;W&lt;/span&gt;&lt;span&gt;A&lt;/span&gt;
+  &lt;span&gt;V&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;
+  &lt;span&gt;T&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;
+  &lt;span&gt;X&lt;/span&gt;&lt;span&gt;T&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.text-wave { font-size: 2rem; font-weight: 700; }
+.text-wave span {
+  display: inline-block;
+  color: #38e8ff;
+  animation: waveLetter 1.4s ease-in-out infinite;
+}
+/* 각 글자에 순서대로 딜레이 */
+.text-wave span:nth-child(2) { animation-delay: 0.1s; }
+.text-wave span:nth-child(3) { animation-delay: 0.2s; }
+.text-wave span:nth-child(4) { animation-delay: 0.3s; }
+.text-wave span:nth-child(6) { animation-delay: 0.5s; }
+.text-wave span:nth-child(7) { animation-delay: 0.6s; }
+.text-wave span:nth-child(8) { animation-delay: 0.7s; }
+.text-wave span:nth-child(9) { animation-delay: 0.8s; }
+@keyframes waveLetter {
+  0%, 100% {
+    transform: translateY(0); color: #38e8ff;
+  }
+  50% {
+    transform: translateY(-20px); color: #ff5ca0;
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview text-preview">
+            <p class="text-typing">타이핑되는 문장입니다_</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;p class="text-typing"&gt;타이핑되는 문장입니다_&lt;/p&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.text-typing {
+  font-size: 1.4rem;
+  font-family: monospace;
+  border-right: 3px solid #3ddc97;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation:
+    typing 4s steps(14) infinite,
+    caret 0.7s step-end infinite;
+}
+@keyframes typing {
+  0%   { width: 0; }
+  60%  { width: 14ch; }
+  90%  { width: 14ch; }
+  100% { width: 0; }
+}
+@keyframes caret {
+  50% { border-color: transparent; }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview text-preview">
+            <p class="text-glow">NEON GLOW</p>
+          </div>
+          <div class="code-panel">
+            <div class="code-tabs">
+              <button class="tab-btn active" data-lang="html">HTML</button>
+              <button class="tab-btn" data-lang="css">CSS</button>
+            </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;p class="text-glow"&gt;NEON GLOW&lt;/p&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.text-glow {
+  font-size: 2.5rem;
+  font-weight: 800; letter-spacing: 6px;
+  color: #fff;
+  animation: neon 1.8s ease-in-out infinite alternate;
+}
+@keyframes neon {
+  from {
+    text-shadow:
+      0 0 6px #38e8ff,
+      0 0 12px #38e8ff,
+      0 0 24px #9b5cff;
+  }
+  to {
+    text-shadow:
+      0 0 12px #ff5ca0,
+      0 0 28px #ff5ca0,
+      0 0 48px #9b5cff;
+  }
+}</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. 무한 장면 -->
+    <section class="section">
+      <h2 class="section-title">Living Scene</h2>
+      <div class="scene-demo">
+        <div class="scene">
+          <div class="sun"></div>
+          <div class="cloud cloud1"></div>
+          <div class="cloud cloud2"></div>
+          <div class="cloud cloud3"></div>
+          <div class="hill"></div>
+          <div class="wave-line"></div>
+        </div>
+        <div class="code-panel scene-code">
+          <div class="code-tabs">
+            <button class="tab-btn active" data-lang="html">HTML</button>
+            <button class="tab-btn" data-lang="css">CSS</button>
+          </div>
+<pre class="tab-content active" data-lang="html"><code>&lt;div class="scene"&gt;
+  &lt;div class="sun"&gt;&lt;/div&gt;
+  &lt;div class="cloud cloud1"&gt;&lt;/div&gt;
+  &lt;div class="cloud cloud2"&gt;&lt;/div&gt;
+  &lt;div class="cloud cloud3"&gt;&lt;/div&gt;
+  &lt;div class="hill"&gt;&lt;/div&gt;
+  &lt;div class="wave-line"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<pre class="tab-content" data-lang="css"><code>.scene {
+  position: relative; height: 320px;
+  border-radius: 20px; overflow: hidden;
+  background: linear-gradient(to bottom,
+    #1b2a4a, #2d1b4a 60%, #4a1b3d);
+}
+.sun {
+  position: absolute;
+  top: 50px; left: 50%; margin-left: -35px;
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff7d6, #ffd166);
+  box-shadow: 0 0 60px #ffd166;
+  animation: sunPulse 4s ease-in-out infinite;
+}
+@keyframes sunPulse {
+  0%, 100% { box-shadow: 0 0 40px #ffd166; transform: scale(1); }
+  50%      { box-shadow: 0 0 80px #ffd166; transform: scale(1.08); }
+}
+.cloud {
+  position: absolute;
+  width: 90px; height: 28px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 30px; filter: blur(1px);
+}
+.cloud1 { top: 40px; animation: drift 18s linear infinite; }
+@keyframes drift {
+  from { left: -120px; }
+  to   { left: 110%; }
+}
+.wave-line {
+  position: absolute; bottom: 0; left: 0;
+  width: 200%; height: 40px;
+  background: repeating-linear-gradient(90deg,
+    #38e8ff 0 20px, transparent 20px 40px);
+  opacity: 0.4;
+  animation: waveSlide 3s linear infinite;
+}
+@keyframes waveSlide {
+  to { transform: translateX(-40px); }
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>made with pure CSS · HTML/CSS 탭을 눌러 코드를 확인하세요</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>초급자용 HTML/CSS 게시판</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="board-container">
+      <h2 class="board-title">자유 게시판 (HTML/CSS 레이아웃)</h2>
+
+      <div class="form-section">
+        <input
+          type="text"
+          class="input-field"
+          placeholder="작성자 이름을 입력하세요"
+        />
+
+        <input
+          type="text"
+          class="input-field"
+          placeholder="글 제목을 입력하세요"
+        />
+
+        <textarea
+          class="textarea-field"
+          placeholder="내용을 입력하세요"
+        ></textarea>
+
+        <button type="button" class="submit-btn">게시글 등록</button>
+      </div>
+
+      <table class="post-table">
+        <thead>
+          <tr>
+            <th class="col-author">작성자</th>
+            <th class="col-content">제목 및 내용</th>
+            <th class="col-date">작성일</th>
+            <th class="col-action">관리</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>홍길동</td>
+            <td>
+              <strong class="post-title-text"
+                >첫 번째 연습용 게시글입니다.</strong
+              ><br />
+              <span class="post-summary"
+                >HTML과 CSS를 이용해 게시판의 틀을 잡는 조각 코드입니다.</span
+              >
+            </td>
+            <td>2026. 05. 27.</td>
+            <td><button type="button" class="delete-btn">삭제</button></td>
+          </tr>
+
+          <tr>
+            <td>이순신</td>
+            <td>
+              <strong class="post-title-text"
+                >질문 있습니다! style.css 연결이 안 돼요.</strong
+              ><br />
+              <span class="post-summary"
+                >link 태그의 href 경로에 파일 이름이 올바르게 적혔는지 확인해
+                보세요.</span
+              >
+            </td>
+            <td>2026. 05. 27.</td>
+            <td><button type="button" class="delete-btn">삭제</button></td>
+          </tr>
+
+          <tr>
+            <td>신사임당</td>
+            <td>
+              <strong class="post-title-text"
+                >웹디자인 초보자를 위한 꿀팁 공유</strong
+              ><br />
+              <span class="post-summary"
+                >테이블 레이아웃을 잡을 때는 border-collapse 속성이
+                필수입니다.</span
+              >
+            </td>
+            <td>2026. 05. 26.</td>
+            <td><button type="button" class="delete-btn">삭제</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

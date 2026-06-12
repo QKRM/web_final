@@ -154,6 +154,7 @@ body {
 .project-card:nth-child(4) .proj-thumb { background: linear-gradient(135deg, #0a3d2e, #0d8060); }
 .project-card:nth-child(5) .proj-thumb { background: linear-gradient(135deg, #4a1530, #a0204a); }
 .project-card:nth-child(6) .proj-thumb { background: linear-gradient(135deg, #102840, #1a5080); }
+.project-card:nth-child(7) .proj-thumb { background: linear-gradient(135deg, #3a1a5e, #5a2890); }
 
 /* ========================================
    그로구 (Baby Yoda) SVG 애니메이션

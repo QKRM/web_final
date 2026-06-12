@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- ===================================================================
+     DOCTYPE: 이 문서가 HTML5 문서임을 브라우저에 알림. 항상 첫 줄.
+==================================================================== -->
+<html lang="ko">
+<!-- <html> : 모든 요소를 감싸는 최상위(루트) 요소.
+     lang="ko" : 주 언어가 한국어임을 명시(접근성/검색엔진에 도움). -->
+
+<head>
+  <!-- <head> : 화면에 직접 보이지 않는 문서 정보(메타데이터) 영역. -->
+
+  <!-- 문자 인코딩: UTF-8 은 한글 포함 전 세계 문자를 표현. -->
+  <meta charset="UTF-8">
+
+  <!-- 반응형 설정: 모바일 화면 너비에 맞춰 배율 조정. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 브라우저 탭에 보이는 제목. -->
+  <title>레오나르도 다 빈치 | 한 인물 연대기</title>
+
+  <!-- 외부 CSS 파일 연결. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =============================================================
+       [1] 히어로 섹션
+       페이지 맨 위에서 인물의 "사진 + 핵심 요약"을 크게 보여주는 영역.
+       방문자가 누구에 대한 페이지인지 한눈에 알 수 있게 한다.
+  ============================================================== -->
+  <header class="hero">
+
+    <!-- 인물 대표 사진.
+         지금은 CSS 로 꾸민 박스(placeholder)로 표시한다.
+         === 실제 사진으로 바꾸려면 아래 <div> 대신 이렇게 쓰면 됨 ===
+         <img class="hero-photo" src="이미지파일.jpg" alt="레오나르도 다 빈치 초상">
+         (src 에는 사진 경로, alt 에는 사진 설명을 적는다.) -->
+    <div class="hero-photo" aria-label="레오나르도 다 빈치 초상">
+      <span class="photo-label">초상화</span>
+    </div>
+
+    <!-- 인물 요약 텍스트 묶음. -->
+    <div class="hero-text">
+      <h1 class="hero-name">레오나르도 다 빈치</h1>
+      <!-- <h1> : 페이지에서 가장 중요한 제목(보통 1개). -->
+
+      <p class="hero-life">1452 ~ 1519 · 이탈리아</p>
+
+      <p class="hero-summary">
+        화가이자 과학자, 발명가, 해부학자였던 르네상스 최고의 만능 천재.
+        '모나리자'와 '최후의 만찬'을 남겼고, 예술과 과학의 경계를
+        자유롭게 넘나들며 세상을 관찰하고 기록했다.
+      </p>
+
+      <!-- 인물을 대표하는 키워드 태그. <ul> 은 순서 없는 목록. -->
+      <ul class="hero-tags">
+        <li>화가</li>
+        <li>발명가</li>
+        <li>과학자</li>
+        <li>해부학자</li>
+      </ul>
+    </div>
+
+  </header>
+
+  <!-- =============================================================
+       [2] 일대기(타임라인) 섹션
+       인물의 생애를 시간순으로 사진과 함께 나열한다.
+       <main> 은 페이지의 핵심 본문(한 페이지에 1개).
+  ============================================================== -->
+  <main class="timeline">
+
+    <h2 class="timeline-title">생애 연대기</h2>
+    <!-- <h2> : <h1> 다음 단계 제목(섹션 제목). -->
+
+    <!-- 세로로 흐르는 타임라인 묶음. -->
+    <div class="timeline-track">
+
+      <!-- ---------------------------------------------------------
+           일대기 항목 1개 단위.
+           <article> 는 그 자체로 의미가 통하는 독립 콘텐츠.
+           구조: [사진] + [연도 + 제목 + 설명]
+      ---------------------------------------------------------- -->
+      <article class="event">
+        <!-- 이 사건의 사진(placeholder). 실제 사진은 위와 같은 방식으로 교체. -->
+        <div class="event-photo"><span class="photo-label">사진</span></div>
+
+        <div class="event-body">
+          <span class="event-year">1452</span>
+          <h3 class="event-title">탄생</h3>
+          <!-- <h3> : <h2> 하위 제목. -->
+          <p class="event-desc">
+            이탈리아 토스카나의 작은 마을 빈치(Vinci) 근처에서 태어났다.
+            '다 빈치'는 '빈치 출신'이라는 뜻이다.
+          </p>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="event-photo"><span class="photo-label">사진</span></div>
+        <div class="event-body">
+          <span class="event-year">1466</span>
+          <h3 class="event-title">공방 입문</h3>
+          <p class="event-desc">
+            피렌체로 가 예술가 베로키오의 공방에 들어가
+            그림과 조각, 금속 공예를 배우며 기초를 다졌다.
+          </p>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="event-photo"><span class="photo-label">사진</span></div>
+        <div class="event-body">
+          <span class="event-year">1482</span>
+          <h3 class="event-title">밀라노 시기</h3>
+          <p class="event-desc">
+            밀라노로 이주해 궁정에서 일하며 회화뿐 아니라
+            무기·건축·기계 설계까지 폭넓은 활동을 펼쳤다.
+          </p>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="event-photo"><span class="photo-label">사진</span></div>
+        <div class="event-body">
+          <span class="event-year">1495</span>
+          <h3 class="event-title">'최후의 만찬'</h3>
+          <p class="event-desc">
+            산타 마리아 델레 그라치에 수도원 벽에
+            예수와 제자들의 순간을 담은 대작을 그리기 시작했다.
+          </p>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="event-photo"><span class="photo-label">사진</span></div>
+        <div class="event-body">
+          <span class="event-year">1503</span>
+          <h3 class="event-title">'모나리자'</h3>
+          <p class="event-desc">
+            신비로운 미소로 유명한 초상화 작업을 시작했다.
+            평생 곁에 두고 다듬은, 그의 대표작이 되었다.
+          </p>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="event-photo"><span class="photo-label">사진</span></div>
+        <div class="event-body">
+          <span class="event-year">1519</span>
+          <h3 class="event-title">영면</h3>
+          <p class="event-desc">
+            프랑스 앙부아즈에서 67세로 생을 마쳤다.
+            남긴 수천 장의 노트는 지금도 천재성의 증거로 남아 있다.
+          </p>
+        </div>
+      </article>
+
+    </div><!-- /.timeline-track -->
+  </main>
+
+  <!-- =============================================================
+       [3] 푸터(꼬리말)
+  ============================================================== -->
+  <footer class="site-footer">
+    <p>© 2026 한 인물 연대기 갤러리 · HTML &amp; CSS 학습용 예제</p>
+    <!-- &amp; 는 특수문자 '&' 를 안전하게 표시하는 HTML 엔티티. -->
+  </footer>
+
+</body>
+</html>

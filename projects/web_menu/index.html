@@ -1,0 +1,106 @@
+<!-- 문서의 형식이 최신 표준인 HTML5임을 웹 브라우저에 알려줍니다. -->
+<!doctype html>
+<!-- 문서의 주 언어를 한국어(ko)로 설정하여 검색 엔진과 스크린 리더에 정보를 제공합니다. -->
+<html lang="ko">
+  <head>
+    <!-- 문자 인코딩을 UTF-8로 설정하여 한글이 깨지지 않도록 합니다. -->
+    <meta charset="UTF-8" />
+    <!-- 모바일 기기에서도 화면 너비에 맞게 올바른 비율로 렌더링되도록 뷰포트를 설정합니다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 웹 브라우저 탭에 표시될 사이트의 제목을 설정합니다. -->
+    <title>심플 디지털 메뉴판</title>
+    <!-- 외부에 작성된 style.css 파일을 불러와서 디자인을 적용합니다. -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 메뉴판의 상단 영역(로고 및 슬로건)을 그룹화하는 시맨틱 태그입니다. -->
+    <header class="menu-header">
+      <!-- 매장 이름을 나타내는 가장 큰 제목 태그입니다. -->
+      <h1 class="store-name">맛있는 식당</h1>
+      <!-- 매장의 소개 문구(슬로건)를 나타내는 단락 태그입니다. -->
+      <p class="store-slogan">매일 아침 신선한 재료로 요리합니다</p>
+    </header>
+
+    <!-- 문서의 핵심 콘텐츠(메뉴 카드들)가 들어가는 메인 영역입니다. -->
+    <main class="menu-main">
+      <!-- 메뉴 카드들을 격자(Grid) 형태로 묶어줄 부모 컨테이너입니다. -->
+      <div class="menu-grid">
+        <!-- 첫 번째 메뉴 카드 영역입니다. 독립적인 콘텐츠를 의미하는 article 태그를 사용했습니다. -->
+        <article class="menu-card">
+          <!-- 음식 사진입니다. 시각 장애인을 위해 alt 속성에 음식 설명을 필수로 적어줍니다. -->
+          <img
+            src="https://picsum.photos/400/300?random=1"
+            alt="매콤한 시그니처 덮밥 사진"
+            class="menu-image"
+          />
+          <!-- 텍스트 정보(메뉴명, 가격, 설명)를 담는 영역입니다. -->
+          <div class="menu-info">
+            <!-- 메뉴명과 가격을 한 줄에 배치하기 위해 묶어준 컨테이너입니다. -->
+            <div class="menu-title-row">
+              <!-- 개별 메뉴의 이름을 나타내는 제목 태그입니다. -->
+              <h2 class="menu-name">시그니처 덮밥</h2>
+              <!-- 메뉴의 가격을 나타내는 인라인 태그입니다. -->
+              <span class="menu-price">12,000원</span>
+            </div>
+            <!-- 메뉴에 대한 상세 설명을 나타내는 단락 태그입니다. -->
+            <p class="menu-desc">매콤한 특제 소스가 들어간 시그니처 덮밥</p>
+          </div>
+        </article>
+
+        <!-- 두 번째 메뉴 카드 (구조는 위와 동일합니다) -->
+        <article class="menu-card">
+          <img
+            src="https://picsum.photos/400/300?random=2"
+            alt="바삭한 수제 돈까스 사진"
+            class="menu-image"
+          />
+          <div class="menu-info">
+            <div class="menu-title-row">
+              <h2 class="menu-name">수제 돈까스</h2>
+              <span class="menu-price">11,000원</span>
+            </div>
+            <p class="menu-desc">국내산 생등심으로 튀겨낸 바삭한 돈까스</p>
+          </div>
+        </article>
+
+        <!-- 세 번째 메뉴 카드 -->
+        <article class="menu-card">
+          <img
+            src="https://picsum.photos/400/300?random=3"
+            alt="따뜻한 우동 사진"
+            class="menu-image"
+          />
+          <div class="menu-info">
+            <div class="menu-title-row">
+              <h2 class="menu-name">가쓰오 우동</h2>
+              <span class="menu-price">8,000원</span>
+            </div>
+            <p class="menu-desc">진한 가쓰오부시 육수와 쫄깃한 면발</p>
+          </div>
+        </article>
+
+        <!-- 네 번째 메뉴 카드 -->
+        <article class="menu-card">
+          <img
+            src="https://picsum.photos/400/300?random=4"
+            alt="연어 샐러드 사진"
+            class="menu-image"
+          />
+          <div class="menu-info">
+            <div class="menu-title-row">
+              <h2 class="menu-name">생연어 샐러드</h2>
+              <span class="menu-price">15,000원</span>
+            </div>
+            <p class="menu-desc">노르웨이산 생연어와 신선한 채소의 만남</p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- 매장의 부가 정보(주소, 연락처 등)를 나타내는 하단(푸터) 영역입니다. -->
+    <footer class="menu-footer">
+      <!-- 매장 주소와 영업시간 텍스트입니다. -->
+      <p>서울시 강남구 맛있는로 123 | 영업시간: 11:00 - 22:00</p>
+    </footer>
+  </body>
+</html>

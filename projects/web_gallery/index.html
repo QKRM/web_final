@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카페 서재현 | 메뉴판</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── 상단 정보 바 ── -->
+  <div class="top-bar">
+    <div class="top-bar__inner">
+      <span class="top-bar__item">🕐 매일 11:00 – 22:00</span>
+      <span class="top-bar__sep"></span>
+      <span class="top-bar__item">📞 02-1234-5678</span>
+      <span class="top-bar__sep"></span>
+      <span class="top-bar__item">📍 서울시 강남구 테헤란로 123</span>
+    </div>
+  </div>
+
+  <!-- ── 히어로 헤더 ── -->
+  <header class="site-header">
+    <div class="site-header__content">
+      <div class="header__since">since 2018</div>
+      <h1 class="header__title">카페 서재현</h1>
+      <p class="header__slogan">매일 아침 신선한 재료로 정성껏 요리합니다</p>
+      <div class="header__chips">
+        <span class="chip">국내산 재료</span>
+        <span class="chip">직화 조리</span>
+        <span class="chip">무첨가 소스</span>
+        <span class="chip">당일 손질</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── 카테고리 네비게이션 (sticky) ── -->
+  <nav class="category-nav">
+    <div class="category-nav__inner">
+      <a href="#main"   class="category-nav__link">메인메뉴</a>
+      <a href="#sides"  class="category-nav__link">사이드</a>
+      <a href="#drinks" class="category-nav__link">음료·디저트</a>
+    </div>
+  </nav>
+
+  <main class="site-main">
+
+    <!-- ── 이달의 추천 배너 ── -->
+    <section class="featured-section">
+      <div class="featured-banner">
+        <div class="featured-banner__kicker">이달의 추천</div>
+        <div class="featured-banner__body">
+
+          <div class="featured-banner__text">
+            <span class="featured-banner__tag">CHEF'S PICK</span>
+            <h2 class="featured-banner__name">한우 갈비탕</h2>
+            <p class="featured-banner__desc">
+              6시간 이상 직화로 끓여낸 진한 국물, 한우 갈비가 듬뿍 들어간
+              시그니처 메뉴입니다. 깊고 구수한 맛이 일품입니다.
+            </p>
+            <div class="featured-banner__meta">
+              <span class="featured-banner__price">₩16,000</span>
+              <span class="featured-banner__kcal">820 kcal</span>
+            </div>
+          </div>
+
+          <div class="featured-banner__image-wrap">
+            <img
+              src="https://picsum.photos/seed/galbitang/600/400"
+              alt="한우 갈비탕"
+              class="featured-banner__img"
+            >
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ 메인메뉴 ════════════════════ -->
+    <section id="main" class="menu-section">
+      <div class="menu-section__header">
+        <h2 class="menu-section__heading">메인메뉴</h2>
+        <p class="menu-section__sub">정성을 담은 한 상</p>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- 시그니처 덮밥 BEST -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/donburi/400/300" alt="시그니처 덮밥">
+            <span class="menu-card__badge badge--best">BEST</span>
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">시그니처 덮밥</span>
+              <span class="menu-card__price">₩12,000</span>
+            </div>
+            <p class="menu-card__desc">매콤한 특제 소스가 들어간 시그니처 덮밥. 국내산 소고기 사용.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">680 kcal</span>
+              <div class="menu-card__tags">
+                <span class="tag tag--spicy">🌶 매콤</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 된장찌개 정식 -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/doenjang/400/300" alt="된장찌개 정식">
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">된장찌개 정식</span>
+              <span class="menu-card__price">₩9,000</span>
+            </div>
+            <p class="menu-card__desc">구수한 국산 된장과 두부, 제철 채소로 끓인 정통 된장찌개 한상.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">590 kcal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 제철 비빔밥 NEW -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/bibimbap/400/300" alt="제철 비빔밥">
+            <span class="menu-card__badge badge--new">NEW</span>
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">제철 비빔밥</span>
+              <span class="menu-card__price">₩10,000</span>
+            </div>
+            <p class="menu-card__desc">신선한 야채와 고소한 참기름, 고추장이 어우러진 전통 비빔밥.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">620 kcal</span>
+              <div class="menu-card__tags">
+                <span class="tag tag--veg">🌿 채식 가능</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 순두부찌개 정식 -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/sundubu/400/300" alt="순두부찌개 정식">
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">순두부찌개 정식</span>
+              <span class="menu-card__price">₩9,500</span>
+            </div>
+            <p class="menu-card__desc">부드럽고 칼칼한 순두부찌개와 공깃밥, 기본 반찬이 함께 나옵니다.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">540 kcal</span>
+              <div class="menu-card__tags">
+                <span class="tag tag--spicy">🌶 칼칼</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 삼겹살 구이 BEST -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/samgyeopsal/400/300" alt="삼겹살 구이">
+            <span class="menu-card__badge badge--best">BEST</span>
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">삼겹살 구이</span>
+              <span class="menu-card__price">₩15,000</span>
+            </div>
+            <p class="menu-card__desc">두툼하게 썬 국내산 삼겹살 200g. 쌈채소와 된장이 함께 제공됩니다.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">780 kcal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 물냉면 -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/naengmyeon/400/300" alt="물냉면">
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">물냉면</span>
+              <span class="menu-card__price">₩11,000</span>
+            </div>
+            <p class="menu-card__desc">시원하고 새콤달콤한 육수에 탱글한 메밀면. 여름 인기 메뉴.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">510 kcal</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════ 사이드 ════════════════════ -->
+    <section id="sides" class="menu-section">
+      <div class="menu-section__header">
+        <h2 class="menu-section__heading">사이드</h2>
+        <p class="menu-section__sub">곁들이는 소소한 행복</p>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- 잡채 HOT -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/japchae/400/300" alt="잡채">
+            <span class="menu-card__badge badge--hot">HOT</span>
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">잡채</span>
+              <span class="menu-card__price">₩13,000</span>
+            </div>
+            <p class="menu-card__desc">쫄깃한 당면과 알록달록 제철 채소, 소고기가 어우러진 잔치 잡채.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">450 kcal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 계란말이 -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/gyeranmali/400/300" alt="계란말이">
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">계란말이</span>
+              <span class="menu-card__price">₩6,000</span>
+            </div>
+            <p class="menu-card__desc">부드럽고 고소한 두툼한 계란말이. 간장 소스가 함께 제공됩니다.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">260 kcal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 김치전 -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/kimchijeon/400/300" alt="김치전">
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">김치전</span>
+              <span class="menu-card__price">₩8,000</span>
+            </div>
+            <p class="menu-card__desc">잘 익은 묵은지로 만든 바삭하고 쫄깃한 김치전. 막걸리와 찰떡궁합.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">380 kcal</span>
+              <div class="menu-card__tags">
+                <span class="tag tag--veg">🌿 채식</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════ 음료·디저트 ════════════════════ -->
+    <section id="drinks" class="menu-section">
+      <div class="menu-section__header">
+        <h2 class="menu-section__heading">음료·디저트</h2>
+        <p class="menu-section__sub">식사의 완벽한 마침표</p>
+      </div>
+
+      <div class="menu-grid menu-grid--4col">
+
+        <!-- 수제 식혜 NEW -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/sikhye7/400/300" alt="수제 식혜">
+            <span class="menu-card__badge badge--new">NEW</span>
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">수제 식혜</span>
+              <span class="menu-card__price">₩4,500</span>
+            </div>
+            <p class="menu-card__desc">매일 직접 담근 달콤한 전통 식혜. 한식의 완벽한 마무리.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">180 kcal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 유자차 -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/yujatee3/400/300" alt="유자차">
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">유자차</span>
+              <span class="menu-card__price">₩4,000</span>
+            </div>
+            <p class="menu-card__desc">상큼한 제주 유자로 만든 따뜻한 유자차. 피로 회복에 도움을 줍니다.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">120 kcal</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 구수한 보리차 -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/borcha9/400/300" alt="보리차">
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">구수한 보리차</span>
+              <span class="menu-card__price">₩2,000</span>
+            </div>
+            <p class="menu-card__desc">직접 볶아 우려낸 고소하고 구수한 보리차. 무한리필 제공.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">0 kcal</span>
+              <div class="menu-card__tags">
+                <span class="tag tag--veg">🌿 무카페인</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 수제 팥빙수 BEST -->
+        <article class="menu-card">
+          <div class="menu-card__image-wrapper">
+            <img class="menu-card__image" src="https://picsum.photos/seed/patbingsu/400/300" alt="수제 팥빙수">
+            <span class="menu-card__badge badge--best">BEST</span>
+          </div>
+          <div class="menu-card__info">
+            <div class="menu-card__title-row">
+              <span class="menu-card__name">수제 팥빙수</span>
+              <span class="menu-card__price">₩8,000</span>
+            </div>
+            <p class="menu-card__desc">직접 삶은 팥과 부드러운 눈꽃 얼음으로 만든 전통 팥빙수.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__kcal">320 kcal</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── 푸터 ── -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer__brand">
+        <p class="footer__brand-name">카페 서재현</p>
+        <p class="footer__brand-tagline">매일 아침 신선한 재료로 정성껏</p>
+      </div>
+      <div class="footer__info">
+        <div class="footer__info-col">
+          <p class="footer__info-label">위치</p>
+          <p class="footer__info-value">서울시 강남구 테헤란로 123</p>
+        </div>
+        <div class="footer__info-col">
+          <p class="footer__info-label">영업시간</p>
+          <p class="footer__info-value">매일 11:00 – 22:00</p>
+          <p class="footer__info-note">라스트오더 21:30</p>
+        </div>
+        <div class="footer__info-col">
+          <p class="footer__info-label">예약·문의</p>
+          <p class="footer__info-value">02-1234-5678</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 카페 서재현. All rights reserved.</p>
+      <p class="footer__notice">메뉴 및 가격은 사전 예고 없이 변경될 수 있습니다. 표기된 열량은 1인분 기준입니다.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

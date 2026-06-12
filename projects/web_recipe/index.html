@@ -1,0 +1,187 @@
+<!-- index.html : 레시피 북 사이트의 뼈대(구조)를 담는 파일 -->
+<!-- HTML은 "내용과 구조"를 담당하고, 꾸미기(색/크기/배치)는 style.css가 담당한다. -->
+
+<!DOCTYPE html>
+<!-- 위 한 줄: "이 문서는 HTML5 문서다"라고 브라우저에 알려주는 선언 -->
+
+<html lang="ko">
+<!-- <html> : 모든 내용을 감싸는 최상위 태그. lang="ko" 는 "한국어 문서"라는 뜻 -->
+
+<head>
+  <!-- <head> : 화면에 직접 보이지 않는 '설정 정보'를 담는 공간 -->
+
+  <meta charset="UTF-8">
+  <!-- 문자 인코딩 설정. 이게 있어야 한글이 깨지지 않는다 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 모바일 화면에서도 크기가 잘 맞도록 해주는 설정 (반응형의 기본) -->
+
+  <title>오늘의 레시피 - 김치볶음밥</title>
+  <!-- 브라우저 탭에 표시되는 제목 -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- 외부 CSS 파일(style.css)을 연결. 이 줄이 있어야 꾸미기가 적용된다 -->
+</head>
+
+<body>
+  <!-- <body> : 실제로 화면에 보이는 모든 내용이 들어가는 공간 -->
+
+  <!-- ===== 1. 머리말(헤더) 영역 ===== -->
+  <header class="header">
+    <!-- class="header" : CSS에서 이 부분을 골라 꾸미기 위한 '이름표' -->
+    <h1>🍳 오늘의 레시피</h1>
+    <!-- <h1> : 페이지에서 가장 중요한 제목 (한 페이지에 보통 하나) -->
+    <p class="subtitle">집에서 쉽게 따라 하는 한 그릇 요리</p>
+    <!-- <p> : 문단(텍스트 한 덩어리)을 나타내는 태그 -->
+  </header>
+
+  <!-- ===== 2. 본문(메인) 영역 ===== -->
+  <main class="recipe">
+    <!-- <main> : 페이지의 핵심 내용을 감싸는 태그 -->
+
+    <!-- 요리 이름과 한 줄 소개 -->
+    <h2 class="recipe-title">김치볶음밥</h2>
+    <p class="recipe-desc">
+      잘 익은 김치 하나면 완성되는 국민 메뉴!<br>
+      <!-- <br> : 줄바꿈. 문장을 다음 줄로 내린다 -->
+      약 15분이면 든든한 한 끼가 뚝딱 만들어진다.
+    </p>
+
+    <!-- ===== 2단 레이아웃 시작 ===== -->
+    <!-- .columns 안에 좌측칼럼 / 우측칼럼 2개를 넣고, CSS에서 가로로 나란히 배치한다 -->
+    <div class="columns">
+
+      <!-- ----- 좌측 칼럼: 큰 이미지 + 재료 ----- -->
+      <div class="col-left">
+
+    <!-- 대표 이미지 -->
+    <img
+      class="recipe-img"
+      src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800"
+      alt="완성된 김치볶음밥 사진">
+    <!-- <img> : 이미지를 넣는 태그
+         src  : 보여줄 이미지 주소(여기선 인터넷 이미지 사용)
+         alt  : 이미지가 안 뜰 때 대신 보일 설명글(시각장애인용 화면읽기에도 사용) -->
+
+    <!-- ----- 재료 영역 ----- -->
+    <section class="section">
+      <!-- <section> : 의미가 같은 내용끼리 묶는 구역 태그 -->
+      <h3>📋 재료 (1인분)</h3>
+      <!-- <h3> : 소제목 (h1 > h2 > h3 순서로 중요도가 낮아진다) -->
+      <ul class="ingredients">
+        <!-- <ul> : 순서가 없는 목록 (점으로 표시됨) -->
+        <li>찬밥 1공기</li>
+        <!-- <li> : 목록 안의 항목 하나 -->
+        <li>잘 익은 김치 1컵</li>
+        <li>대파 1/2대</li>
+        <li>달걀 1개</li>
+        <li>식용유 1큰술</li>
+        <li>참기름 약간</li>
+      </ul>
+    </section>
+
+      </div><!-- /.col-left 좌측 칼럼 끝 -->
+
+      <!-- ----- 우측 칼럼: 만드는 법 ----- -->
+      <div class="col-right">
+
+    <!-- ----- 조리 순서 영역 (단계마다 이미지 + 설명) ----- -->
+    <section class="section">
+      <h3>👩‍🍳 만드는 법</h3>
+
+      <!-- 단계 1 -->
+      <!-- .step 한 칸이 '한 단계'를 나타낸다. 안에 번호 + 이미지 + 설명이 들어간다 -->
+      <div class="step">
+        <!-- 단계 번호 동그라미 -->
+        <span class="step-number">1</span>
+        <img
+          class="step-img"
+          src="https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=400"
+          alt="팬에 김치를 볶는 모습">
+        <!-- 단계 설명 묶음 -->
+        <div class="step-text">
+          <h4>김치 볶기</h4>
+          <!-- <h4> : h3보다 한 단계 더 작은 소제목 -->
+          <p>팬에 식용유 1큰술을 두르고, 송송 썬 김치를 넣어
+             중불에서 2~3분간 볶는다. 김치가 살짝 투명해지면 OK!</p>
+        </div>
+      </div>
+
+      <!-- 단계 2 -->
+      <div class="step">
+        <span class="step-number">2</span>
+        <img
+          class="step-img"
+          src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400"
+          alt="밥을 넣고 볶는 모습">
+        <div class="step-text">
+          <h4>찬밥 넣고 볶기</h4>
+          <p>김치가 익으면 찬밥 1공기를 넣는다. 주걱으로 밥을 눌러
+             펴면서 김치와 골고루 섞이도록 볶아준다.</p>
+        </div>
+      </div>
+
+      <!-- 단계 3 -->
+      <div class="step">
+        <span class="step-number">3</span>
+        <img
+          class="step-img"
+          src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400"
+          alt="대파를 넣고 볶는 모습">
+        <div class="step-text">
+          <h4>대파 넣기</h4>
+          <p>썬 대파를 넣고, 밥알이 고슬고슬하게 흩어질 때까지
+             1~2분 더 볶는다. 파 향이 올라오면 거의 다 됐다.</p>
+        </div>
+      </div>
+
+      <!-- 단계 4 -->
+      <div class="step">
+        <span class="step-number">4</span>
+        <img
+          class="step-img"
+          src="https://images.unsplash.com/photo-1607301405390-d831c242f59b?w=400"
+          alt="참기름을 두르는 모습">
+        <div class="step-text">
+          <h4>참기름 마무리</h4>
+          <p>불을 끄고 참기름을 살짝 둘러 향을 더한다.
+             불을 끈 뒤 넣어야 향이 날아가지 않는다.</p>
+        </div>
+      </div>
+
+      <!-- 단계 5 -->
+      <div class="step">
+        <span class="step-number">5</span>
+        <img
+          class="step-img"
+          src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400"
+          alt="달걀 프라이를 올린 완성 모습">
+        <div class="step-text">
+          <h4>달걀 올려 완성</h4>
+          <p>접시에 담고 반숙 달걀 프라이를 올리면 완성!
+             김가루를 뿌리면 더 맛있다.</p>
+        </div>
+      </div>
+
+    </section>
+
+      </div><!-- /.col-right 우측 칼럼 끝 -->
+    </div><!-- /.columns 2단 레이아웃 끝 -->
+
+    <!-- ----- 요리 팁 영역 (2단 아래, 전체 폭) ----- -->
+    <section class="section tip">
+      <!-- class를 두 개(section, tip) 적으면 두 스타일이 모두 적용된다 -->
+      <h3>💡 요리 팁</h3>
+      <p>밥은 갓 지은 밥보다 <strong>찬밥</strong>을 쓰면 훨씬 고슬고슬하다.</p>
+      <!-- <strong> : 중요한 단어를 굵게 강조 -->
+    </section>
+
+  </main>
+
+  <!-- ===== 3. 꼬리말(푸터) 영역 ===== -->
+  <footer class="footer">
+    <p>© 2026 오늘의 레시피 · HTML/CSS 학습용 예제</p>
+  </footer>
+
+</body>
+</html>

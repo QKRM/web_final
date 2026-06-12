@@ -1,0 +1,85 @@
+:root {
+  --cyan: #38e8ff;
+  --yellow: #ffd166;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  background: #0b0f1a;
+}
+
+.scene {
+  position: relative;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #1b2a4a, #2d1b4a 60%, #4a1b3d);
+}
+
+.sun {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-left: -35px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff7d6, var(--yellow));
+  box-shadow: 0 0 60px var(--yellow);
+  animation: sunPulse 4s ease-in-out infinite;
+}
+@keyframes sunPulse {
+  0%, 100% { box-shadow: 0 0 40px var(--yellow); transform: scale(1); }
+  50%      { box-shadow: 0 0 80px var(--yellow); transform: scale(1.08); }
+}
+
+.cloud {
+  position: absolute;
+  width: 90px;
+  height: 28px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 30px;
+  filter: blur(1px);
+}
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+.cloud::before { width: 40px; height: 40px; top: -16px; left: 14px; }
+.cloud::after  { width: 30px; height: 30px; top: -10px; left: 48px; }
+
+.cloud1 { top: 40px;  animation: drift 18s linear infinite; }
+.cloud2 { top: 90px;  transform: scale(0.7); animation: drift 26s linear infinite; opacity: 0.8; }
+.cloud3 { top: 130px; transform: scale(0.5); animation: drift 22s linear infinite 4s; opacity: 0.6; }
+@keyframes drift {
+  from { left: -120px; }
+  to   { left: 110%; }
+}
+
+.hill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, #16221d, #1f3a2e);
+  border-radius: 50% 50% 0 0 / 80px 80px 0 0;
+}
+
+.wave-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 40px;
+  background: repeating-linear-gradient(90deg, var(--cyan) 0 20px, transparent 20px 40px);
+  opacity: 0.4;
+  animation: waveSlide 3s linear infinite;
+}
+@keyframes waveSlide {
+  to { transform: translateX(-40px); }
+}
