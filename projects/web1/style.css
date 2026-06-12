@@ -1,0 +1,42 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+  border: 2px solid black;
+  margin: 10px;
+  display: inline-block;
+}
+
+#king {
+  background-color: red;
+}
+
+#king2 {
+  background-color: red;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+#king3 {
+  background-color: red;
+  position: static;
+  top: 100px;
+}
+
+#king4 {
+  background-color: red;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+section#absolute {
+  position: relative;
+}
+
+#king5 {
+  background-color: red;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+}

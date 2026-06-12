@@ -3,512 +3,462 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ===== SEO 메타 태그 ===== -->
-    <!-- 여기에 이름과 직함을 입력하세요 -->
-    <meta name="description" content="[이름]의 프론트엔드 개발자 포트폴리오 — 사용자 경험을 중심으로 생각하고, 코드로 구현하는 개발자입니다." />
-    <meta name="keywords" content="프론트엔드 개발자, Frontend Developer, HTML, CSS, JavaScript, React, 포트폴리오" />
-    <meta name="author" content="[이름]" />
-    <meta name="theme-color" content="#00ff87" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="[이름] — Frontend Developer" />
-    <meta property="og:description" content="사용자 경험을 중심으로 생각하고, 코드로 구현하는 프론트엔드 개발자 포트폴리오" />
-    <meta property="og:type" content="website" />
-    <!-- 여기에 배포 후 실제 URL을 입력하세요 -->
-    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
-    <!-- <meta property="og:image" content="https://your-domain.com/og-image.png" /> -->
-
-    <!-- 여기에 실제 이름을 입력하세요 -->
-    <title>[이름] — Frontend Developer</title>
-
-    <!-- Pretendard (한국어) + Space Grotesk (영문/코드) -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-
+    <title>2026년 5월 이모지 캘린더</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-
-    <!-- ===== 내비게이션 바 ===== -->
-    <header class="navbar" role="banner">
-      <nav class="nav-inner" role="navigation" aria-label="주 내비게이션">
-        <!-- 여기에 이름 이니셜 또는 로고를 입력하세요 -->
-        <a href="#hero" class="nav-logo" aria-label="홈으로 이동">
-          <span class="logo-bracket">&lt;</span>Dev<span class="logo-bracket">/&gt;</span>
-        </a>
-
-        <!-- 데스크탑 메뉴 -->
-        <ul class="nav-links" role="list">
-          <li><a href="#about" class="nav-link">소개</a></li>
-          <li><a href="#skills" class="nav-link">기술 스택</a></li>
-          <li><a href="#projects" class="nav-link">프로젝트</a></li>
-          <li><a href="#contact" class="nav-link">연락처</a></li>
-        </ul>
-
-        <!-- 모바일 햄버거 버튼 -->
-        <button class="hamburger" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </nav>
-
-      <!-- 모바일 드롭다운 메뉴 -->
-      <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
-        <ul role="list">
-          <li><a href="#about" class="mobile-link" role="menuitem">소개</a></li>
-          <li><a href="#skills" class="mobile-link" role="menuitem">기술 스택</a></li>
-          <li><a href="#projects" class="mobile-link" role="menuitem">프로젝트</a></li>
-          <li><a href="#contact" class="mobile-link" role="menuitem">연락처</a></li>
-        </ul>
+    <div class="calendar-container">
+      <!-- 캘린더 타이틀 헤더 -->
+      <div class="calendar-header">
+        <h1>2026년 5월</h1>
+        <p>May 2026</p>
       </div>
-    </header>
 
-    <main>
-
-      <!-- ===== 히어로 섹션 ===== -->
-      <section id="hero" class="section hero-section" aria-label="소개 히어로">
-        <div class="hero-bg-grid" aria-hidden="true"></div>
-        <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
-        <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
-
-        <div class="hero-content">
-          <p class="hero-greeting">안녕하세요, 저는</p>
-
-          <!-- 여기에 이름을 입력하세요 -->
-          <h1 class="hero-name">
-            <span class="hero-name-text">[이름]</span>
-            <!-- 예시: 서재현 -->
-          </h1>
-
-          <div class="hero-role">
-            <span class="role-prefix">Frontend</span>
-            <span class="role-main">Developer</span>
-          </div>
-
-          <!-- 여기에 한 줄 태그라인을 입력하세요 -->
-          <p class="hero-tagline">
-            <!-- 예시 문구: 사용자가 느끼는 0.1초의 차이를 만드는 개발자 -->
-            [한 줄 소개 문장을 입력하세요]
-          </p>
-
-          <div class="hero-cta">
-            <!-- 여기에 GitHub URL을 입력하세요 -->
-            <a href="https://github.com/[깃허브-아이디]" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-              GitHub 보기
-            </a>
-            <a href="#contact" class="btn btn--outline">
-              연락하기
-            </a>
-          </div>
-
-          <!-- 스크롤 힌트 -->
-          <div class="scroll-hint" aria-hidden="true">
-            <span>스크롤</span>
-            <div class="scroll-arrow"></div>
-          </div>
-        </div>
-
-        <!-- 히어로 우측 데코레이션 (코드 블록 스타일) -->
-        <div class="hero-code-block" aria-hidden="true">
-          <div class="code-window">
-            <div class="code-window-bar">
-              <span class="dot dot--red"></span>
-              <span class="dot dot--yellow"></span>
-              <span class="dot dot--green"></span>
-              <span class="code-filename">developer.js</span>
-            </div>
-            <pre class="code-content"><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
-  <span class="c-key">name</span>: <span class="c-string">"[이름]"</span>,
-  <span class="c-key">role</span>: <span class="c-string">"Frontend Dev"</span>,
-  <span class="c-key">passion</span>: <span class="c-string">"UX &amp; Performance"</span>,
-  <span class="c-key">skills</span>: [
-    <span class="c-string">"HTML"</span>, <span class="c-string">"CSS"</span>,
-    <span class="c-string">"JavaScript"</span>, <span class="c-string">"React"</span>
-  ],
-  <span class="c-key">coffee</span>: <span class="c-number">Infinity</span> <span class="c-comment">// ☕</span>
-};</code></pre>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== 소개 섹션 ===== -->
-      <section id="about" class="section about-section" aria-label="자기 소개">
-        <div class="section-inner">
-          <div class="section-label reveal-item">About Me</div>
-          <h2 class="section-title reveal-item">저는 이런 개발자예요</h2>
-
-          <div class="about-grid">
-            <!-- 자기소개 텍스트 -->
-            <div class="about-text reveal-item">
-              <!-- 여기에 자기소개 내용을 입력하세요 (3~4문장 권장) -->
-              <p>
-                [자기소개 내용을 입력하세요. 예: 저는 사용자 경험을 최우선으로 생각하는 프론트엔드 개발자입니다.]
-              </p>
-              <p>
-                [두 번째 문단: 관심사, 개발 철학, 또는 특기를 입력하세요. 예: 성능 최적화와 접근성 있는 웹을 만드는 것에 관심이 많습니다.]
-              </p>
-              <p>
-                [세 번째 문단: 목표나 지향점을 입력하세요. 예: 팀원들과 함께 성장하며 더 나은 제품을 만드는 것이 목표입니다.]
-              </p>
-            </div>
-
-            <!-- 간단 스펙 카드 -->
-            <div class="about-cards reveal-item">
-              <div class="about-card">
-                <div class="about-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                  </svg>
-                </div>
-                <div class="about-card-info">
-                  <span class="about-card-label">학력</span>
-                  <!-- 여기에 학교/전공을 입력하세요 -->
-                  <span class="about-card-value">[학교명] [전공]</span>
-                </div>
-              </div>
-
-              <div class="about-card">
-                <div class="about-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2"/>
-                    <path d="M8 21h8M12 17v4"/>
-                  </svg>
-                </div>
-                <div class="about-card-info">
-                  <span class="about-card-label">경력</span>
-                  <!-- 여기에 경력을 입력하세요 (신입이면 "신입" 또는 인턴 경험 등) -->
-                  <span class="about-card-value">[경력 내용]</span>
-                </div>
-              </div>
-
-              <div class="about-card">
-                <div class="about-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 8v4l3 3"/>
-                  </svg>
-                </div>
-                <div class="about-card-info">
-                  <span class="about-card-label">가용 여부</span>
-                  <!-- 여기에 취업 가능 시점을 입력하세요 -->
-                  <span class="about-card-value">[즉시 입사 가능 / 2026년 X월~]</span>
-                </div>
-              </div>
-
-              <div class="about-card">
-                <div class="about-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <div class="about-card-info">
-                  <span class="about-card-label">위치</span>
-                  <!-- 여기에 거주 지역을 입력하세요 -->
-                  <span class="about-card-value">[거주 지역, 예: 서울특별시]</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== 기술 스택 섹션 ===== -->
-      <section id="skills" class="section skills-section" aria-label="기술 스택">
-        <div class="section-inner">
-          <div class="section-label reveal-item">Tech Stack</div>
-          <h2 class="section-title reveal-item">사용할 수 있는 기술들</h2>
-          <p class="section-subtitle reveal-item">지속적으로 새로운 기술을 배우고 있습니다.</p>
-
-          <!-- 핵심 기술 -->
-          <div class="skills-category reveal-item">
-            <h3 class="skills-category-title">Core</h3>
-            <div class="skills-grid">
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--html" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157z"/></svg>
-                </div>
-                <span>HTML5</span>
-              </div>
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--css" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157z"/></svg>
-                </div>
-                <span>CSS3</span>
-              </div>
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--js" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
-                </div>
-                <span>JavaScript</span>
-              </div>
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--ts" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>
-                </div>
-                <span>TypeScript</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 프레임워크 & 라이브러리 -->
-          <div class="skills-category reveal-item">
-            <h3 class="skills-category-title">Framework & Library</h3>
-            <div class="skills-grid">
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--react" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09c.282 0 .529.05.75.172.93.533 1.32 2.51.945 5.038-.07.518-.172 1.06-.29 1.612-1.04-.248-2.167-.39-3.348-.418-.726-1.02-1.485-1.98-2.254-2.86 1.63-1.51 3.16-2.544 4.197-2.544zM9.563 8.333c-.138.14-.275.285-.41.435-.726 1.02-1.485 1.98-2.254 2.86-1.04.248-2.167.39-3.348.418-.11-.552-.213-1.094-.29-1.612-.374-2.528.016-4.505.945-5.038.215-.122.462-.172.744-.172 1.036 0 2.567 1.034 4.197 2.544zm-3.37 7.03c-.42-.198-.83-.404-1.22-.617-.95-.527-1.705-1.09-2.25-1.672-.543-.58-.82-1.156-.82-1.07 0-.916.277-1.49.82-2.07.545-.582 1.3-1.145 2.25-1.672.39-.214.8-.42 1.22-.617-.024.17-.044.34-.063.51-.132 1.24-.132 2.516 0 3.756.02.17.04.34.063.51zm1.52 3.68c-.282 0-.528-.05-.75-.172-.93-.533-1.32-2.51-.945-5.038.07-.518.172-1.06.29-1.612 1.04.248 2.167.39 3.348.418.726 1.02 1.485 1.98 2.254 2.86-1.63 1.51-3.16 2.544-4.197 2.544zm4.197-.274c-.138-.14-.275-.285-.41-.435-.726-1.02-1.485-1.98-2.254-2.86 1.04-.248 2.167-.39 3.348-.418.11.552.213 1.094.29 1.612.374 2.528-.016 4.505-.945 5.038-.215.122-.462.172-.744.172-1.036 0-2.567-1.034-4.197-2.544zm.94-5.72c-.56.59-1.12 1.21-1.66 1.87-.56-.66-1.1-1.28-1.66-1.87.56-.59 1.1-1.21 1.66-1.87.56.66 1.1 1.28 1.66 1.87zm3.37-3.68c.42.198.83.404 1.22.617.95.527 1.705 1.09 2.25 1.672.543.58.82 1.156.82 2.07 0 .916-.277 1.49-.82 2.07-.545.582-1.3 1.145-2.25 1.672-.39.214-.8.42-1.22.617.024-.17.044-.34.063-.51.132-1.24.132-2.516 0-3.756-.02-.17-.04-.34-.063-.51z"/></svg>
-                </div>
-                <span>React</span>
-              </div>
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--next" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0z"/></svg>
-                </div>
-                <span>Next.js</span>
-              </div>
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--tailwind" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
-                </div>
-                <span>Tailwind</span>
-              </div>
-              <div class="skill-badge">
-                <div class="skill-icon skill-icon--git" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.546 10.93L13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.946 3.039 1.837 1.837 0 0 1-2.606-2.581L13.48 8.542v6.mexique424a1.838 1.838 0 1 1-1.504-.184V8.352a1.842 1.842 0 0 1-.996-2.416L8.242 3.22 .454 11.01a1.55 1.55 0 0 0 0 2.186l10.463 10.483a1.55 1.55 0 0 0 2.188 0l10.44-10.457a1.55 1.55 0 0 0 0-2.185"/></svg>
-                </div>
-                <span>Git</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 도구 -->
-          <div class="skills-category reveal-item">
-            <h3 class="skills-category-title">Tools & More</h3>
-            <div class="skills-grid">
-              <div class="skill-badge skill-badge--tool">
-                <span class="skill-tag-text">VS Code</span>
-              </div>
-              <div class="skill-badge skill-badge--tool">
-                <span class="skill-tag-text">Figma</span>
-              </div>
-              <div class="skill-badge skill-badge--tool">
-                <span class="skill-tag-text">GitHub</span>
-              </div>
-              <div class="skill-badge skill-badge--tool">
-                <span class="skill-tag-text">Vercel</span>
-              </div>
-              <!-- 여기에 추가 도구를 입력하세요 -->
-              <div class="skill-badge skill-badge--tool skill-badge--add">
-                <span class="skill-tag-text">+ 추가 가능</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== 프로젝트 섹션 ===== -->
-      <section id="projects" class="section projects-section" aria-label="프로젝트">
-        <div class="section-inner">
-          <div class="section-label reveal-item">Projects</div>
-          <h2 class="section-title reveal-item">제가 만든 것들</h2>
-          <p class="section-subtitle reveal-item">직접 설계하고 구현한 프로젝트들입니다.</p>
-
-          <div class="projects-grid">
-
-            <!-- ===== 프로젝트 1: 이모지 캘린더 (피처드 프로젝트) ===== -->
-            <article class="project-card project-card--featured reveal-item" aria-label="대표 프로젝트: 이모지 캘린더">
-              <div class="project-card-inner">
-                <!-- 프로젝트 미리보기 (인라인 캘린더 미니 프리뷰) -->
-                <div class="project-preview project-preview--calendar" aria-hidden="true">
-                  <div class="calendar-mini">
-                    <div class="calendar-mini-header">
-                      <span>2026년 5월</span>
-                    </div>
-                    <div class="calendar-mini-grid">
-                      <div class="cm-empty"></div><div class="cm-empty"></div><div class="cm-empty"></div><div class="cm-empty"></div><div class="cm-empty"></div>
-                      <div class="cm-day">1</div><div class="cm-day cm-sat">2</div>
-                      <div class="cm-day cm-sun">3</div><div class="cm-day">4</div><div class="cm-day cm-holiday">5</div><div class="cm-day">6</div><div class="cm-day">7</div><div class="cm-day cm-sat">8</div><div class="cm-day cm-sun">9</div>
-                      <div class="cm-day">10</div><div class="cm-day">11</div><div class="cm-day">12</div><div class="cm-day">13</div><div class="cm-day">14</div><div class="cm-day cm-sat">15</div><div class="cm-day cm-sun">16</div>
-                      <div class="cm-day">17</div><div class="cm-day cm-today">18</div><div class="cm-day">19</div><div class="cm-day">20</div><div class="cm-day">21</div><div class="cm-day cm-sat">22</div><div class="cm-day cm-sun">23</div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 프로젝트 정보 -->
-                <div class="project-info">
-                  <div class="project-tags">
-                    <span class="project-tag">HTML</span>
-                    <span class="project-tag">CSS</span>
-                    <span class="project-tag">JavaScript</span>
-                    <span class="project-tag project-tag--featured">대표 프로젝트</span>
-                  </div>
-                  <h3 class="project-title">이모지 캘린더</h3>
-                  <p class="project-desc">
-                    날짜마다 개성 있는 SVG 이모지가 담긴 인터랙티브 캘린더 UI 컴포넌트입니다. CSS Grid 레이아웃, 커스텀 SVG 아이콘, 다크모드, 반응형 디자인, WCAG 접근성 기준을 모두 충족하며 구현했습니다.
-                  </p>
-                  <ul class="project-features">
-                    <li>CSS Grid 기반 7열 캘린더 레이아웃</li>
-                    <li>31개 수작업 SVG 이모지 아이콘</li>
-                    <li>다크모드 / 반응형 완벽 지원</li>
-                    <li>키보드 내비게이션 · ARIA 접근성</li>
-                  </ul>
-                  <div class="project-links">
-                    <!-- 여기에 GitHub 링크를 입력하세요 -->
-                    <a href="https://github.com/[깃허브-아이디]/[레포지토리명]" target="_blank" rel="noopener noreferrer" class="project-link">
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                      코드 보기
-                    </a>
-                    <a href="./calendar/" class="project-link project-link--demo">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                      데모 보기
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- ===== 프로젝트 2: 플레이스홀더 ===== -->
-            <!-- 여기에 두 번째 프로젝트 정보를 채워주세요 -->
-            <article class="project-card reveal-item" aria-label="프로젝트 2">
-              <div class="project-preview project-preview--placeholder" aria-hidden="true">
-                <div class="preview-placeholder-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                </div>
-              </div>
-              <div class="project-info">
-                <div class="project-tags">
-                  <!-- 여기에 사용 기술 태그를 입력하세요 -->
-                  <span class="project-tag">[기술 1]</span>
-                  <span class="project-tag">[기술 2]</span>
-                </div>
-                <!-- 여기에 프로젝트 제목을 입력하세요 -->
-                <h3 class="project-title">[프로젝트 2 제목]</h3>
-                <!-- 여기에 프로젝트 설명을 입력하세요 -->
-                <p class="project-desc">[프로젝트 2에 대한 설명을 2~3문장으로 입력하세요. 어떤 문제를 해결했는지, 어떤 기능이 있는지 간략하게 소개해주세요.]</p>
-                <div class="project-links">
-                  <!-- 여기에 GitHub 링크를 입력하세요 -->
-                  <a href="https://github.com/[깃허브-아이디]/[레포지토리명]" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    코드 보기
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- ===== 프로젝트 3: 플레이스홀더 ===== -->
-            <!-- 여기에 세 번째 프로젝트 정보를 채워주세요 -->
-            <article class="project-card reveal-item" aria-label="프로젝트 3">
-              <div class="project-preview project-preview--placeholder" aria-hidden="true">
-                <div class="preview-placeholder-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-              </div>
-              <div class="project-info">
-                <div class="project-tags">
-                  <span class="project-tag">[기술 1]</span>
-                  <span class="project-tag">[기술 2]</span>
-                </div>
-                <h3 class="project-title">[프로젝트 3 제목]</h3>
-                <p class="project-desc">[프로젝트 3에 대한 설명을 2~3문장으로 입력하세요.]</p>
-                <div class="project-links">
-                  <a href="https://github.com/[깃허브-아이디]/[레포지토리명]" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    코드 보기
-                  </a>
-                </div>
-              </div>
-            </article>
-
-          </div>
-
-          <!-- 더 보기 링크 -->
-          <div class="projects-more reveal-item">
-            <!-- 여기에 GitHub 프로필 URL을 입력하세요 -->
-            <a href="https://github.com/[깃허브-아이디]" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
-              GitHub에서 더 보기
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== 연락처 섹션 ===== -->
-      <section id="contact" class="section contact-section" aria-label="연락처">
-        <div class="section-inner">
-          <div class="section-label reveal-item">Contact</div>
-          <h2 class="section-title reveal-item">함께 일해요</h2>
-          <p class="section-subtitle reveal-item">
-            새로운 기회나 협업 제안은 언제든 환영합니다.<br />
-            아래 채널로 편하게 연락 주세요.
-          </p>
-
-          <div class="contact-grid reveal-item">
-            <!-- 이메일 -->
-            <a href="mailto:[이메일@example.com]" class="contact-card" aria-label="이메일로 연락하기">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                </svg>
-              </div>
-              <div class="contact-card-content">
-                <span class="contact-card-label">이메일</span>
-                <!-- 여기에 이메일 주소를 입력하세요 -->
-                <span class="contact-card-value">[이메일@example.com]</span>
-              </div>
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/[깃허브-아이디]" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="GitHub 프로필 방문">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                </svg>
-              </div>
-              <div class="contact-card-content">
-                <span class="contact-card-label">GitHub</span>
-                <!-- 여기에 GitHub 아이디를 입력하세요 -->
-                <span class="contact-card-value">@[깃허브-아이디]</span>
-              </div>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/[링크드인-아이디]" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="LinkedIn 프로필 방문">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </div>
-              <div class="contact-card-content">
-                <span class="contact-card-label">LinkedIn</span>
-                <!-- 여기에 LinkedIn 아이디를 입력하세요 -->
-                <span class="contact-card-value">/in/[링크드인-아이디]</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ===== 푸터 ===== -->
-    <footer class="footer" role="contentinfo">
-      <div class="footer-inner">
-        <!-- 여기에 이름을 입력하세요 -->
-        <p class="footer-copy">
-          &copy; 2026 <span class="footer-name">[이름]</span>. Designed &amp; Built with passion.
-        </p>
-        <p class="footer-stack">HTML &middot; CSS &middot; JavaScript</p>
+      <!-- 요일 헤더 -->
+      <div class="weekdays">
+        <div class="sun">일</div>
+        <div>월</div>
+        <div>화</div>
+        <div>수</div>
+        <div>목</div>
+        <div>금</div>
+        <div class="sat">토</div>
       </div>
-    </footer>
 
-    <script src="main.js"></script>
+      <!-- 날짜 및 이모지 그리드 (2026년 5월 고정) -->
+      <div class="calendar-days">
+        <!-- 5월 1일이 금요일이므로 앞의 5칸은 빈칸 처리 -->
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+
+        <!-- 1일 ~ 7일 -->
+        <div class="day">
+          <span class="num">1</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2l2.4 7.3h7.6l-6.2 4.5 2.4 7.2-6.2-4.5-6.2 4.5 2.4-7.2-6.2-4.5h7.6z"
+                fill="#ffb703"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sat">
+          <span class="num">2</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#ffb703" />
+              <circle cx="9" cy="9" r="1.5" />
+              <circle cx="15" cy="9" r="1.5" />
+              <path
+                d="M8 14s1.5 2 4 2 4-2 4-2"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sun">
+          <span class="num">3</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54z"
+                fill="#ff4d6d"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">4</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#6f4e37"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path
+                d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"
+              />
+              <line x1="6" y1="2" x2="6" y2="4" />
+              <line x1="12" y1="2" x2="12" y2="4" />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">5</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a6 6 0 0 0-6 6c0 4 6 14 6 14s6-10 6-14a6 6 0 0 0-6-6z"
+                fill="#ff70a6"
+              />
+              <circle cx="12" cy="8" r="2" fill="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">6</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19.36 10.04A6 6 0 0 0 8 11a6 6 0 0 0-6 6h18a4 4 0 0 0-.64-6.96z"
+                fill="#bde0fe"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">7</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24" fill="#ffb703">
+              <circle cx="12" cy="12" r="5" />
+              <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                stroke="#ffb703"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 8일 ~ 14일 -->
+        <div class="day">
+          <span class="num">8</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                fill="#ffccd5"
+              />
+              <path
+                d="M12 17c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z"
+                fill="#ff4d6d"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sat">
+          <span class="num">9</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#48cae4"
+              stroke-width="2"
+            >
+              <path d="M9 18V5l12-2v13" />
+              <circle cx="6" cy="18" r="3" fill="#48cae4" />
+              <circle cx="18" cy="16" r="3" fill="#48cae4" />
+            </svg>
+          </div>
+        </div>
+        <div class="day sun">
+          <span class="num">10</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 22h20L12 2z" fill="#fb8500" />
+              <circle cx="12" cy="14" r="2" fill="#fff" />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">11</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 20.2c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l3.59-3.59C10.93 18.65 11.46 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9z"
+                fill="#a2d2ff"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">12</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
+                fill="#ccd5ae"
+              />
+              <path
+                d="M9 16l3-3 3 3M9 10l3 3 3-3"
+                stroke="#fff"
+                stroke-width="2"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">13</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 3a9 9 0 1 0 9 9 9.77 9.77 0 0 1-9-9z"
+                fill="#ffd166"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">14</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#560bad"
+              stroke-width="2"
+            >
+              <path
+                d="M12 2v20M17 5H7.5a3.5 3.5 0 0 0 0 7h9a3.5 3.5 0 0 1 0 7H6"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 15일 ~ 21일 -->
+        <div class="day">
+          <span class="num">15</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4 6H2v14a2 2 0 0 0 2 2h14v-2H4V6zm16-4H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"
+                fill="#023e8a"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sat">
+          <span class="num">16</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="6" width="20" height="12" rx="3" fill="#3a0ca3" />
+              <circle cx="7" cy="12" r="2" fill="#fff" />
+              <path d="M15 12h4M17 10v4" stroke="#fff" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="day sun">
+          <span class="num">17</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#7209b7"
+              stroke-width="2"
+            >
+              <circle cx="18.5" cy="17.5" r="2.5" />
+              <circle cx="5.5" cy="17.5" r="2.5" />
+              <path d="M16 17.5V12h-4V8h3V5H9v3h1v4H6v5.5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- ★ 오늘 날짜 18일 (활기찬 축구공 이모지!) ★ -->
+        <div class="day today">
+          <span class="num">18</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#10b981"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" fill="#ffffff" />
+              <polygon points="12,7 15,9 14,13 10,13 9,9" fill="#10b981" />
+              <line x1="12" y1="7" x2="12" y2="2" />
+              <line x1="15" y1="9" x2="19" y2="6" />
+              <line x1="14" y1="13" x2="17" y2="18" />
+              <line x1="10" y1="13" x2="7" y2="18" />
+              <line x1="9" y1="9" x2="5" y2="6" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="day">
+          <span class="num">19</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"
+                fill="#f72585"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">20</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.16 5A3 3 0 0 0 16 2.16L12 6.16l-4-4A3 3 0 0 0 3.84 6.4l4 4-4 4A3 3 0 0 0 8 18.84l4-4 4 4a3 3 0 0 0 4.16-4.24l-4-4 4-4A3 3 0 0 0 20.16 5z"
+                fill="#ffb703"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">21</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h16v12H4z" fill="#8338ec" />
+              <circle cx="8" cy="20" r="2" fill="#334155" />
+              <circle cx="16" cy="20" r="2" fill="#334155" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 22일 ~ 28일 -->
+        <div class="day">
+          <span class="num">22</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 6h-2.18A3 3 0 0 0 13.2 4h-2.4a3 3 0 0 0-4.62 2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-8-2h2a1 1 0 0 1 0 2h-2a1 1 0 0 1 0-2z"
+                fill="#e63946"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sat">
+          <span class="num">23</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f4a261"
+              stroke-width="2"
+            >
+              <path
+                d="M6 14h12v5a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-5z"
+                fill="#ffe3b3"
+              />
+              <path
+                d="M6 14V5a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v9M18 6h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sun">
+          <span class="num">24</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#2a9d8f"
+              stroke-width="2"
+            >
+              <rect x="2" y="4" width="20" height="12" rx="2" fill="#e7f5f3" />
+              <circle cx="7" cy="20" r="2" fill="#334155" />
+              <circle cx="17" cy="20" r="2" fill="#334155" />
+              <path d="M6 8h4v4H6zM14 8h4v4h-4z" />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">25</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 22h20L12 2z" fill="#e76f51" />
+              <path
+                d="M12 18a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm-1-4V9h2v5h-2z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">26</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#4ea8de" />
+              <path
+                d="M12 6v6l4 2"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">27</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7z"
+                fill="#ffb703"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day">
+          <span class="num">28</span>
+          <div class="emoji-slot">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#70e000"
+              stroke-width="2"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+              />
+              <path d="M22 2L12 12M22 2h-6M22 2v6" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 29일 ~ 31일 -->
+        <div class="day">
+          <span class="num">29</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                fill="#ff4d6d"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sat">
+          <span class="num">30</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#ffcc00" />
+              <path
+                d="M8 11.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0-3 0zm5 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0-3 0z"
+              />
+              <path
+                d="M16 16c0-2.21-1.79-4-4-4s-4 1.79-4 4"
+                stroke="#000"
+                stroke-width="2"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="day sun">
+          <span class="num">31</span>
+          <div class="emoji-slot">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                fill="#ffb703"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
